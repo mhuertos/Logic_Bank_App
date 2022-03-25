@@ -1,0 +1,25 @@
+El projecte inclou:
+1. Carpeta del projecte Java
+2. Base de dades (arxiu.sql);
+3. Driver jdbc utilitzat.
+
+Per executar el programa: 
+	1. Ubicar-se a la carpeta src i 'enter': 'javac com/logicBank/App.java'
+	2. Executar: java -cp .;C:\Users\Marcos\Downloads\mysql-connector-java-8.0.28.jar com/logicBank/App
+
+En el IDE utilitzat per desenvolupar aquest projecte, s'ha afegit un CLASSPATH a un arxiu .jar extern (jdbc driver).
+Si es vol executar el programa, l'única manera viable que he trobat de fer-ho és descarregant el jdbc i 
+cridant a la instrucció 2 'Executar' incloent la ruta personal on es troba ubicat el driver jdbc.
+
+Aclaracions:
+L'aplicació importa la classe Scanner (java.util.Scanner) enlloc de la classe ReadLine (java.io.BufferedReader). 
+El motiu d'aquesta decisió es basa en un intent per garantir major eficiència i control durant el procés d'entrada de 
+dades per part de l'usuari. ReadLine() retorna una valor de tipus String, que després pot ser reconvertit en 
+un tipus primitiu, p.e. integer, amb la funció Integer.parseInt(String s), o directament fent 
+Integer.parseInt(br.cons.readLine()).
+Scanner incorpora una funcionalitat que son els métodes: scan.hasNextInt(), scan.hasNextDouble()...que permeten 
+anticipar el valor que hi ha per davant del cursor just abans de ser llegit, i així, evitar el llançament d'exepcions
+i omplir el codi de blocs try/catch.
+
+
+
